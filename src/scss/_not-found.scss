@@ -1,0 +1,36 @@
+@use 'variables';
+
+.main-content-not-found {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  place-items: center;
+  height: 100%;
+  width: 100%;
+  max-width: none;
+  padding: 4rem 0;
+}
+
+.main-content-not-found section {
+  text-align: center;
+}
+
+.main-content-not-found h1 {
+  width: fit-content;
+  height: fit-content;
+  font-size: 5rem;
+}
+
+.main-content-not-found a {
+  margin-top: 1.5rem;
+  padding: 1rem 2rem;
+  color: variables.$text-muted-inverse;
+  background-color: variables.$color-primary;
+  border-radius: 1rem;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: color-mix(in srgb, variables.$color-primary, black 10%);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}

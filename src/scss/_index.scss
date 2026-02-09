@@ -1,0 +1,95 @@
+@use 'variables';
+@use 'sass:color';
+
+.main-content-index {
+  display: grid;
+  gap: 3rem;
+  margin: 3rem 0;
+}
+
+.album {
+  display: grid;
+  gap: 2rem;
+}
+
+.album-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  place-items: center;
+
+  img {
+    border: solid 2px variables.$color-background-inverse;
+    border-radius: 0.5rem;
+  }
+}
+
+.buttons-container {
+  display: grid;
+  gap: 2rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+@mixin button-color($color, $text) {
+  @if $color == 'röd' {
+    background-color: red;
+  } @else if $color == 'blå' {
+      background-color: blue;
+  } @else if $color == 'grön' {
+      background-color: green;
+  } @else {
+      background-color: yellow;
+  }
+  @if $text {
+    color: variables.$text-primary;
+  } @else {
+    color: variables.$text-primary-inverse;
+  }
+}
+
+.button {
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+}
+
+.button1 {
+  @extend .button;
+  @include button-color('grön', true);
+}
+
+.button2 {
+  @extend .button;
+  @include button-color('blå', false);
+}
+
+.button3 {
+  @extend .button;
+  @include button-color('röd', false);
+}
+
+.button4 {
+  @extend .button;
+  @include button-color('gul', true);
+}
+
+body[data-theme="dark"]{
+  .button1 {
+  @include button-color('grön', false);
+}
+
+.button2 {
+  @include button-color('blå', true);
+}
+
+.button3 {
+  @include button-color('röd', true);
+}
+
+.button4 {
+  @include button-color('gul', false);
+}
+  }

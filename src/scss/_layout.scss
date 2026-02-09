@@ -1,0 +1,60 @@
+@use 'variables';
+
+body {
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.header-content, .main-content, .footer-content {
+  display: grid;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 variables.$standard-padding;
+}
+
+.main-content {
+  height: 100%;
+}
+
+header {
+  padding: 1rem 0;
+  color: variables.$text-primary;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.header-content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 8rem;
+  & a, button {
+   padding: 1rem;
+   border-radius: 0.5rem;
+  }
+}
+
+.footer-content ul {
+  display: grid;
+  place-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 800px) {
+  .footer-content ul {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  header {
+    font-size: 1rem;
+  }
+
+  .header-content {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    place-items: center;
+  }
+}
