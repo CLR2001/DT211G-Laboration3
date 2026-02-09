@@ -25,6 +25,7 @@ nav {
   & a {
     padding: 1rem;
     border-radius: 0.5rem;
+    color: variables.$text-primary-inverse;
   }
 }
 
@@ -38,7 +39,18 @@ nav {
     width: calc(100% - 2rem);
     height: 2px;
     border-radius: 1rem;
-    background-color: variables.$color-primary;
+    background-color: variables.$color-secondary;
+  }
+}
+
+body[data-theme="dark"] {
+  .nav-list a {
+    color: variables.$text-primary;
+  }
+  .active-page {
+    &::after {
+      background-color: variables.$color-accent;
+    }
   }
 }
 
@@ -94,6 +106,7 @@ nav[data-open="true"] {
   .nav-list-container {
     position: static;
     visibility: visible;
+    display: block;
     background-color: unset;
   }
   .nav-list {
@@ -101,7 +114,11 @@ nav[data-open="true"] {
     align-items: center;
     background-color: unset;
     height: 100%;
+    a {
+      color: variables.$text-primary;
+    }
   }
+  
   .menu-tools {
     position: static;
     visibility: visible;

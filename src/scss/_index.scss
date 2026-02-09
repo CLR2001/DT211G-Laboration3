@@ -37,12 +37,24 @@
 @mixin button-color($color, $text) {
   @if $color == 'röd' {
     background-color: red;
+    &:hover {
+        background-color: darken(red, 20%);
+      }
   } @else if $color == 'blå' {
       background-color: blue;
+      &:hover {
+        background-color: darken(blue, 30%);
+      }
   } @else if $color == 'grön' {
       background-color: green;
+      &:hover {
+        background-color: darken(green, 10%);
+      }
   } @else {
       background-color: yellow;
+      &:hover {
+        background-color: darken(yellow, 5%);
+      }
   }
   @if $text {
     color: variables.$text-primary;
@@ -54,11 +66,15 @@
 .button {
   padding: 1rem 2rem;
   border-radius: 0.5rem;
+  outline-color: variables.$color-background-inverse;
+  &:active {
+    transform: scale(0.9)
+  }
 }
 
 .button1 {
   @extend .button;
-  @include button-color('grön', true);
+  @include button-color('grön', false);
 }
 
 .button2 {
@@ -78,18 +94,18 @@
 
 body[data-theme="dark"]{
   .button1 {
-  @include button-color('grön', false);
-}
-
-.button2 {
-  @include button-color('blå', true);
-}
-
-.button3 {
-  @include button-color('röd', true);
-}
-
-.button4 {
-  @include button-color('gul', false);
-}
+    @include button-color('grön', true);
   }
+
+  .button2 {
+    @include button-color('blå', true);
+  }
+
+  .button3 {
+    @include button-color('röd', true);
+  }
+
+  .button4 {
+    @include button-color('gul', false);
+  }
+}

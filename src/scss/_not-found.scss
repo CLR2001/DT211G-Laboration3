@@ -34,3 +34,9 @@
     transform: scale(0.95);
   }
 }
+
+body[data-theme="dark"] {
+  .main-content-not-found a {
+    color: variables.$text-muted;    
+  }
+}
