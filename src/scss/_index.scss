@@ -36,24 +36,24 @@
 
 @mixin button-color($color, $text) {
   @if $color == 'röd' {
-    background-color: red;
+    background-color: lighten(red, 5%);
     &:hover {
         background-color: darken(red, 20%);
       }
   } @else if $color == 'blå' {
-      background-color: blue;
+      background-color: lighten(blue, 10%);
       &:hover {
         background-color: darken(blue, 30%);
       }
   } @else if $color == 'grön' {
-      background-color: green;
+      background-color: lighten(green, 5%);
       &:hover {
         background-color: darken(green, 10%);
       }
   } @else {
-      background-color: yellow;
+      background-color: lighten(yellow, 10%);
       &:hover {
-        background-color: darken(yellow, 5%);
+        background-color: darken(yellow, 15%);
       }
   }
   @if $text {

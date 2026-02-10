@@ -1,3 +1,29 @@
 export const sassPage = `
+  <section class="main-content-sass">
   <h1>Sass</h1>
+  <section class="sass-start">
+    <h2>Komma igång</h2>
+    <p>
+      Eftersom Sass är helt kompatibelt med "vanlig" CSS så var det mycket lätt att komma igång med Sass. Man kunde börja med att skriva CSS som vanligt och sedan gradvis intoducera nya aspekter som partials eller variabler när man kände sig bekväm och redo att göra det. Det känns också som att Sass syntaxen är utformad med både CSS och JavaScript i fokus vilket leder till lätt integration om man redan kan de två "språken".
+    </p>
+  </section>
+  <section class="pro-con">
+    <h2>För- och nackdelar</h2>
+    <p>
+      Fördelarna med Sass är många och ju mer man arbetar med det kommer man säkert att hitta fler fördelar allt eftersom. Den största fördelen för min arbetsprocess var partials. Mycket kod i samma fil kan snabbt leda till oreda och man spenderar mer tid än vad som är rimligt på att scrolla igenom sina filer. Med partials slipper man detta och man får mycket renare kodstruktur. Andra fördelar är exempelvis dessa:
+    </p>
+    <ul>
+      <li>Variabler för att kunna ändra värden på flera element med en rad kod utan att behöva ändra alla element var för sig.</li>
+      <li>Mixins för att gruppera upprepad kod för snabb integration med olika element.</li>
+      <li>Nesting bidrog till mer lättläslig kod och även snabbare kodning. Nesting fungerar även med vanlig CSS vilket jag hade jobbat med innan så det var egentligen inget nytt för mig.</li>
+    </ul>
+    <p>
+      Nackdelarna med Sass var inte många men nedan är några jag kunde komma på.
+    </p>
+    <ul>
+      <li>Webbplatser stödjer inte Sasskod direkt så om man för någon anledning inte använder sig av ett automatiseringsverktyg behöver man göra denna konversion själv.</li>
+      <li>Eftersom alla inte arbetar med Sass så är det inte lika lätt att dela koden med andra som inte kan syntaxen eller filstrukturen.</li>
+    </ul>
+  </section>
+</section>
 `;

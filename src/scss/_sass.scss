@@ -1,0 +1,22 @@
+.main-content-sass {
+  display: grid;
+  gap: 3rem;
+  max-width: clamp(40ch, 80%, 60ch);
+  margin: 3rem auto;
+}
+
+.sass-start {
+  display: grid;
+  gap: 1rem;
+}
+
+.pro-con {
+  display: grid;
+  gap: 1rem;
+  ul {
+    display: grid;
+    gap: 1ch;
+    list-style-type: disc;
+    padding-left: 1.5rem;
+  }
+}
