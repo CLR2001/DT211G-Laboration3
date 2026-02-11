@@ -1,22 +1,20 @@
-# ◈ Projektnamn
+# ◈ Laboration 3
 
-En kort och kärnfull beskrivning av projektet här. (T.ex. "Denna applikation är en väderstation som visualiserar realtidsdata från öppna API:er med fokus på prestanda och användarupplevelse.")
+Laboration med fokus på CSS Preproccesorer, specifikt Sass.
 
 ## ✦ Projektbeskrivning
-Detta repository innehåller källkoden för [Namn på projektet]. Projektets huvudsyfte är att [förklara målet, t.ex. lösa problemet med bildhantering på webben]. 
-
-Arkitekturen är byggd för att vara modulär och lätt att underhålla, med en automatiserad pipeline för att optimera assets och säkerställa snabba laddtider.
+Detta repository innehåller en webbplats som byggts och designats med hjälp av olika Sass funktioner.. 
 
 ## ⚙ Funktioner
-* **Asset-optimering:** Automatisk hantering av bildformat (AVIF/WebP) för minimal filstorlek.
-* **Modern CSS-struktur:** Använder SCSS för skalbar och läsbar styling.
-* **Prestandafokus:** Minimal bundle-storlek genom effektiv trädskakning (tree-shaking) i Vite.
+* **If/else-satser:** Knapparnas design på startsidan har olika design efter olika rgument i en if/else-sats.
+* **Partials:** Filstruktur anpassad för användning av partials.
+* **Sass-funktioner:** Olika Sass-funktioner som använts är exempelvis variabler, mixins och inheritance.
 
 ## ⌨ Installation & Setup
 
 1. **Klona projektet:**
    ```bash
-   git clone https://github.com/CLR2001/[ditt-reponamn].git
+   git clone https://github.com/CLR2001/DT211G-Laboration3.git
    ```
 2. **Installera beroenden:**
    ```bash
@@ -33,7 +31,7 @@ Arkitekturen är byggd för att vara modulär och lätt att underhålla, med en 
    ```
 
 ## ⬀ Länk till webbplats
-[Webbplats]()
+[Webbplats](https://dt211g-laboration3.pages.dev/)
 
 ## ⬢ Utvecklare
 **Ludvig Rosenqvist** — *Student*
