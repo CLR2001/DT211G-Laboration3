@@ -1,14 +1,15 @@
-# ◈ Laboration 3
+# ◈ Laboration 3-4
 
-Laboration med fokus på CSS Preproccesorer, specifikt Sass.
+Laboration med fokus på CSS Preproccesorer, specifikt Sass & animeringar.
 
 ## ✦ Projektbeskrivning
-Detta repository innehåller en webbplats som byggts och designats med hjälp av olika Sass funktioner.. 
+Detta repository innehåller en webbplats som byggts och designats med hjälp av olika Sass funktioner och animeringar. 
 
 ## ⚙ Funktioner
 * **If/else-satser:** Knapparnas design på startsidan har olika design efter olika rgument i en if/else-sats.
 * **Partials:** Filstruktur anpassad för användning av partials.
 * **Sass-funktioner:** Olika Sass-funktioner som använts är exempelvis variabler, mixins och inheritance.
+* **Animationer:** En hel del animationer som bidrar till ett mycket professionellt utseende...
 
 ## ⌨ Installation & Setup
 
