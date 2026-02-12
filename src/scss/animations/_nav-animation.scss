@@ -1,3 +1,5 @@
+@use 'theme-animation' as *;
+
 $curve-smooth: cubic-bezier(0.22, 1, 0.36, 1);
 $curve-elastic: cubic-bezier(0.17, 0.885, 0.32, 1.37);
 $nav-duration: 300ms;
@@ -36,16 +38,22 @@ nav[data-open="true"] {
   & .nav-list-container {
     visibility: visible;
     clip-path: inset(0 0 0 0);
-    transition: clip-path $top-nav-duration ease-in;
+    transition: 
+      clip-path $top-nav-duration ease-in,
+      $theme-background-transition;
   }
   & .nav-list {
     visibility: visible;
-    transition: clip-path $top-nav-duration ease-in;
+    transition: 
+      clip-path $top-nav-duration ease-in,
+      $theme-background-transition;
   }
   & + .menu-tools {
     visibility: visible;
     clip-path: inset(0 0 0 0);
-    transition: clip-path $bottom-nav-duration ease-out $top-nav-duration;
+    transition: 
+      clip-path $bottom-nav-duration ease-out $top-nav-duration,
+      $theme-background-transition;
     & .menu-tools-content {
       @include fade-slide-in(1, 0);
       transition-delay: $nav-duration * 0.9;

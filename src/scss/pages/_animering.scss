@@ -1,8 +1,21 @@
 @use '../core' as *;
 
+.animering-page {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 3rem;
+  width: 100%;
+  margin: 3rem 0;
+  text-align: center;
+  h1 {
+    animation: text-shadow 4s ease-in infinite;
+  }
+}
+
 $box-side-length: 9ch;
 $box-side-height: 6ch;
-.sliding-box {
+
+.box {
   position: fixed;
   top: 0;
   left: 0;
@@ -11,12 +24,51 @@ $box-side-height: 6ch;
   padding: 0.5ch;
   color: white;
   text-align: center;
-  animation: sliding-box 10s linear infinite;
   z-index: 1000000;
 }
 
+
+.sliding-box {
+  @extend .box;
+  animation: sliding-box 10s linear infinite;
+}
+
+.bouncing-box{
+  @extend .box;
+  top: 50svh;
+  left: 50vw;
+  transform: translate(-50%,-50%);
+  animation: bouncing-box 3s linear infinite;
+}
+
+.checkbox-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: top;
+  gap: 4px;
+  input {
+    display: block;
+  }
+}
+
+.custom-checkbox {
+  height: min-content;
+  background-color: green;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: transform 1s ease;
+}
+
+.custom-checkbox:has(input:checked){
+  transform: rotate(360deg);
+}
+
+.checkbox {
+  display: block;
+}
+
 @keyframes sliding-box {
-  0%{
+  0% {
     transform: translate(0,0);
     background-color: blue;
   }
@@ -32,8 +84,60 @@ $box-side-height: 6ch;
     transform: translate(0,calc(100vh - #{$box-side-height}));
     background-color: red;
   }
-  100%{
+  100% {
     transform: translate(0,0);
     background-color: blue;
+  }
+}
+
+@keyframes bouncing-box {
+  0% {
+    transform: translate(-50%,-50%);
+    background-color: blue;
+  }
+  12.5% {
+    transform: translate(calc(25vw - #{$box-side-length}),-500%);
+  }
+  25% {
+    transform: translate(calc(50vw - #{$box-side-length}),0);
+    background-color: red;
+  }
+  37.5% {
+    transform: translate(calc(25vw - #{$box-side-length}),500%);
+  }
+  50% {
+    transform: translate(-50%,-50%);
+  }
+  62.5% {
+    transform: translate(-25vw,-500%)
+  }
+  75% {
+    transform: translate(-50vw,0);
+    background-color: yellow;
+  }
+  87.5% {
+    transform: translate(-25vw,500%)
+  }
+  100% {
+    transform: translate(-50%,-50%);
+    background-color: blue;
+  }
+}
+
+@keyframes text-shadow {
+  0% {
+    text-shadow: 0 0 5px white;
+  }
+  25% {
+    text-shadow: 0 0 50px white;
+  }
+  50% {
+    text-shadow: 0 0 5px white;
+  }
+  75% {
+    text-shadow: 0 0 50px white;
+  }
+  100% {
+    text-shadow: 0 0 5px white;
   }
 }

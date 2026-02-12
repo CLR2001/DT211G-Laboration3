@@ -1,7 +1,7 @@
 @use '../core' as *;
 
 footer {
-  padding: 1rem 0;
+  padding: 1rem $standard-padding;
   color: $text-muted-inverse;
   background-color: $color-primary;
 }

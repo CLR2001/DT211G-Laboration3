@@ -6,6 +6,7 @@ nav {
 }
 
 .nav-list-container {
+  visibility: hidden;
   position: fixed;
   inset: 0;
   top: $header-height;
@@ -13,6 +14,7 @@ nav {
 }
 
 .nav-list {
+  visibility: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -83,9 +85,6 @@ body:has(nav[data-open="true"]) {
 }
 
 nav[data-open="true"] {
-  & .nav-list-container {
-    display: block;
-  }
   & .nav-list {
     visibility: visible;
   }
@@ -105,10 +104,10 @@ nav[data-open="true"] {
   .nav-list-container {
     position: static;
     visibility: visible;
-    display: block;
     background-color: unset;
   }
   .nav-list {
+    visibility: visible;
     flex-direction: row;
     align-items: center;
     background-color: unset;

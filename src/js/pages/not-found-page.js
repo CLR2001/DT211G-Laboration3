@@ -1,5 +1,5 @@
 export const notFoundPage = `
-  <div class="main-content-not-found">
+  <div class="main-content not-found-page">
     <section>
       <h1>404</h1>
       <p>Page not found</p>

@@ -1,18 +1,15 @@
-.main-content-sass {
+.sass-page {
   display: grid;
   gap: 2rem;
   max-width: clamp(40ch, 80%, 60ch);
-  margin: 2rem auto;
-}
-
-.sass-start {
-  display: grid;
+  margin: 3rem 0;
+  section {
+    display: grid;
   gap: 1rem;
+  }
 }
 
 .pro-con {
-  display: grid;
-  gap: 1rem;
   ul {
     display: grid;
     gap: 1ch;

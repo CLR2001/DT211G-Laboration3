@@ -6,19 +6,13 @@ body {
   grid-template-rows: auto 1fr auto;
 }
 
-.header-content, .main-content, .footer-content {
+.header-content, main, .footer-content {
   display: grid;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 $standard-padding;
-}
-
-.main-content {
-  height: 100%;
 }
 
 header {
-  padding: 1rem 0;
   color: $text-primary;
   font-size: 1.25rem;
   font-weight: bold;
@@ -33,6 +27,19 @@ header {
    padding: 1rem;
    border-radius: 0.5rem;
   }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 $standard-padding;
+}
+
+.main-content {
+  height: 100%;
 }
 
 .footer-content ul {

@@ -1,5 +1,5 @@
 export const indexPage = `
-<section class="main-content-index">
+<section class="main-content index-page">
   <h1>Startsida</h1>
   <section class="album">
     <h2>Slumpmässiga bilder</h2>

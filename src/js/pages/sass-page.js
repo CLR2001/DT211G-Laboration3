@@ -1,5 +1,5 @@
 export const sassPage = `
-  <section class="main-content-sass">
+  <section class="main-content sass-page">
   <h1>Sass</h1>
   <section class="sass-start">
     <h2>Komma igång</h2>
