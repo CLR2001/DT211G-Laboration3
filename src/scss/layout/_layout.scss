@@ -1,4 +1,4 @@
-@use 'variables';
+@use '../core' as *;
 
 body {
   min-height: 100svh;
@@ -10,7 +10,7 @@ body {
   display: grid;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 variables.$standard-padding;
+  padding: 0 $standard-padding;
 }
 
 .main-content {
@@ -19,7 +19,7 @@ body {
 
 header {
   padding: 1rem 0;
-  color: variables.$text-primary;
+  color: $text-primary;
   font-size: 1.25rem;
   font-weight: bold;
 }

@@ -1,0 +1,11 @@
+@use '../core' as *;
+
+footer {
+  padding: 1rem 0;
+  color: $text-muted-inverse;
+  background-color: $color-primary;
+}
+
+body[data-theme="dark"] footer {
+  color: $text-muted;
+}

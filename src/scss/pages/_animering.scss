@@ -1,0 +1,39 @@
+@use '../core' as *;
+
+$box-side-length: 9ch;
+$box-side-height: 6ch;
+.sliding-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: $box-side-height;
+  width: $box-side-length;
+  padding: 0.5ch;
+  color: white;
+  text-align: center;
+  animation: sliding-box 10s linear infinite;
+  z-index: 1000000;
+}
+
+@keyframes sliding-box {
+  0%{
+    transform: translate(0,0);
+    background-color: blue;
+  }
+  25% {
+    transform: translate(calc(100vw - #{$box-side-length}),0);
+    background-color: green;
+  }
+  50% {
+    transform: translate(calc(100vw - #{$box-side-length}),calc(100vh - #{$box-side-height}));
+    background-color: yellow;
+  }
+  75% {
+    transform: translate(0,calc(100vh - #{$box-side-height}));
+    background-color: red;
+  }
+  100%{
+    transform: translate(0,0);
+    background-color: blue;
+  }
+}

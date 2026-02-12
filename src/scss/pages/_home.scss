@@ -1,4 +1,4 @@
-@use 'variables';
+@use '../core' as *;
 @use 'sass:color';
 
 .main-content-index {
@@ -19,7 +19,7 @@
   place-items: center;
 
   img {
-    border: solid 2px variables.$color-background-inverse;
+    border: solid 2px $color-background-inverse;
     border-radius: 0.5rem;
   }
 }
@@ -57,16 +57,16 @@
       }
   }
   @if $text {
-    color: variables.$text-primary;
+    color: $text-primary;
   } @else {
-    color: variables.$text-primary-inverse;
+    color: $text-primary-inverse;
   }
 }
 
 .button {
   padding: 1rem 2rem;
   border-radius: 0.5rem;
-  outline-color: variables.$color-background-inverse;
+  outline-color: $color-background-inverse;
   &:active {
     transform: scale(0.9)
   }

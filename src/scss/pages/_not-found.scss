@@ -1,4 +1,4 @@
-@use 'variables';
+@use '../core' as *;
 
 .main-content-not-found {
   display: grid;
@@ -23,12 +23,12 @@
 .main-content-not-found a {
   margin-top: 1.5rem;
   padding: 1rem 2rem;
-  color: variables.$text-muted-inverse;
-  background-color: variables.$color-primary;
+  color: $text-muted-inverse;
+  background-color: $color-primary;
   border-radius: 1rem;
   transition: background-color 0.3s ease;
   &:hover {
-    background-color: color-mix(in srgb, variables.$color-primary, black 10%);
+    background-color: color-mix(in srgb, $color-primary, black 10%);
   }
   &:active {
     transform: scale(0.95);
@@ -37,6 +37,6 @@
 
 body[data-theme="dark"] {
   .main-content-not-found a {
-    color: variables.$text-muted;    
+    color: $text-muted;    
   }
 }

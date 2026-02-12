@@ -22,5 +22,4 @@ export const indexPage = `
     </div>
   </section>
 </section>
-
 `;

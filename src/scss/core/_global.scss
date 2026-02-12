@@ -1,7 +1,7 @@
-@use 'variables';
+@use 'variables' as *;
 
 :root {
-  font-size: variables.$global-font-clamp;
+  font-size: $global-font-clamp;
 }
 
 body {
@@ -9,12 +9,12 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   font-family: 'Inter', Arial, Helvetica, sans-serif;
-  color: variables.$text-muted;
-  background-color: variables.$color-background;
+  color: $text-muted;
+  background-color: $color-background;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: variables.$text-primary;
+  color: $text-primary;
 }
 
 a {
@@ -22,12 +22,16 @@ a {
 }
 
 *:focus-visible {
-  outline: solid 2px variables.$color-accent;
+  outline: solid 2px $color-accent;
+}
+
+body[data-theme="light"] *:focus-visible {
+  outline: solid 2px $color-secondary;
 }
 
 svg {
   fill: none;
-  stroke: variables.$text-primary;
+  stroke: $text-primary;
   stroke-width: 1.5;
   stroke-linecap: round;
   stroke-linejoin: round;

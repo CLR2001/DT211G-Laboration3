@@ -1,4 +1,4 @@
-@use 'variables';
+@use '../core' as *;
 
 nav {
   display: grid;
@@ -8,9 +8,8 @@ nav {
 .nav-list-container {
   position: fixed;
   inset: 0;
-  top: variables.$header-height;
-  display: none;
-  background-color: variables.$color-background;
+  top: $header-height;
+  background-color: $color-background;
 }
 
 .nav-list {
@@ -19,13 +18,13 @@ nav {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  height: calc(100svh - (variables.$header-height * 2));
+  height: calc(100svh - ($header-height * 2));
   border-radius: 1rem;
-  background-color: variables.$color-primary;
+  background-color: $color-primary;
   & a {
     padding: 1rem;
     border-radius: 0.5rem;
-    color: variables.$text-primary-inverse;
+    color: $text-primary-inverse;
   }
 }
 
@@ -39,17 +38,17 @@ nav {
     width: calc(100% - 2rem);
     height: 2px;
     border-radius: 1rem;
-    background-color: variables.$color-secondary;
+    background-color: $color-secondary;
   }
 }
 
 body[data-theme="dark"] {
   .nav-list a {
-    color: variables.$text-primary;
+    color: $text-primary;
   }
   .active-page {
     &::after {
-      background-color: variables.$color-accent;
+      background-color: $color-accent;
     }
   }
 }
@@ -68,11 +67,11 @@ body[data-theme="dark"] {
   right: 0;
   bottom: 0;
   visibility: hidden;
-  height: variables.$header-height;
+  height: $header-height;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: variables.$color-background;
+  background-color: $color-background;
   & .button {
     border-radius: 0.5rem;
   }
@@ -80,7 +79,7 @@ body[data-theme="dark"] {
 
 body:has(nav[data-open="true"]) {
   overflow: hidden;
-  padding-right: variables.$scrollbar-width;
+  padding-right: $scrollbar-width;
 }
 
 nav[data-open="true"] {
@@ -115,7 +114,7 @@ nav[data-open="true"] {
     background-color: unset;
     height: 100%;
     a {
-      color: variables.$text-primary;
+      color: $text-primary;
     }
   }
   
